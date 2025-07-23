@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact me</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/style.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/contact.css')}}">
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/"><img src="/static/logo.png" alt="Logo"></a>
+    <nav>
+      <a href="/">首頁</a>
+      <a href="/about">關於我</a>
+      <a href="/experience">個人經歷</a>
+      <div class="dropdown">
+          <a>旅遊</a>
+          <div class="dropdown-content">
+              <a href="/travel1">America🇺🇸</a>
+              <a href="/travel2">Japan🇯🇵</a>
+              <a href="/travel3">待續...</a>
+          </div>
+      </div>
+      <a href="/contact">聯絡我</a>
+    </nav>
+  </header>
+  <br>
+  <h1 style="text-align: center; color: #804d63;">✨ Contact Me! ✨</h1>
+  <br>
+  <br>
+  <div class="contact_icon">
+    <a href="https://www.instagram.com/04_ai?igsh=MWpzdTYzcjY2eWdzeg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"><img src="/static/contact/instagram.png" alt="instagram" ></a>
+    <a href="https://www.facebook.com/profile.php?id=100011710923771&mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer"><img src="/static/contact/facebook.png" alt="instagram" ></a>
+    <a href="https://www.threads.net/@04_ai" target="_blank" rel="noopener noreferrer"><img src="/static/contact/threads.png" alt="instagram" ></a>
+  </div>
+  <!-- 假設這是您的 form.html 文件 -->
+  <form action="/contact_data" method="post">
+    <input type="text" name="name" placeholder="Your Name">
+    <input type="email" name="email" placeholder="Your Email">
+    <textarea name="message" placeholder="Your Message"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+
+    <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeA8SAYRxWcMXMZLEz4wDl2U-xuKpWPGglouKyQxG8GkLU09Q/viewform?embedded=true" width="640" height="643" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe> -->
+
+</body>
+</html>

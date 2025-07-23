@@ -1,0 +1,21 @@
+.contact_icon {
+    display: flex;          /* 使用 flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中（如果需要） */
+    width: auto;             /* 使 div 佔滿整個容器寬度 */
+    margin-top: 20px;        /* 上方留空間 */
+}
+.contact_icon img {
+    margin: 0 10px; 
+    width: 70px;        /* 每個鏈接之間增加空間 */
+}
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+  form input, form textarea, form button {
+    margin: 10px 0;
+    padding: 10px;
+  }

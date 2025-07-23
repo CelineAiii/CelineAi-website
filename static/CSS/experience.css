@@ -1,0 +1,46 @@
+.expandable-section {
+    margin: 20px;
+    padding: 10px;
+    text-align: center; /* 置中 */
+    background-color: #f7f2f7;
+  }
+  .expandable-section .content {
+    display: none;
+    margin-top: 10px;
+  }
+  .expandable-section .toggle-button {
+    cursor: pointer;
+    background-color: #f7f2f7;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px; /* 設置字體大小 */
+    font-weight: bold; /* 設置字體為粗體 */
+  }
+  .pdf-container {
+    width: 80%; /* 調整PDF顯示區域的寬度 */
+    height: 600px; /* 調整PDF顯示區域的高度 */
+    border: none;
+    margin: 0 auto; /* 置中 */
+  }
+  .custom-button {
+    background-color: #D6B6DE; /* 設置按鈕背景顏色 */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px; /* 設置按鈕圓角 */
+    cursor: pointer;
+    max-width: 33%;
+  }
+
+  .content img{
+    max-width: 50%;
+    height: 500px;
+  }

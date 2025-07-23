@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japan Trip</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/style.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/travel.css')}}">
+
+</head>
+<body>
+
+  <header>
+    <a href="/"><img src="/static/logo.png" alt="Logo"></a>
+    <nav>
+      <a href="/">首頁</a>
+      <a href="/about">關於我</a>
+      <a href="/experience">個人經歷</a>
+      <div class="dropdown">
+          <a>旅遊</a>
+          <div class="dropdown-content">
+              <a href="/travel1">America🇺🇸</a>
+              <a href="/travel2">Japan🇯🇵</a>
+              <a href="/travel3">待續...</a>
+          </div>
+      </div>
+      <a href="/contact">聯絡我</a>
+  </nav>
+  </header>
+    <!-- 這裡放你網頁的內容 -->
+    <h1>🇯🇵 About my Trip in Japan! 🇯🇵</h1>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="1" onclick="toggleHeart(this, 1)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 1)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 1)">留言</button>
+      </div>
+    </div>
+    
+    <div class="content-image">
+      <img src="/static/Japan0627/IMG_0482.JPG" alt="描述图片内容1" class="active">
+      <img src="/static/Japan0627/IMG_3379.jpg" alt="描述图片内容2">
+      <img src="/static/Japan0627/IMG_3394.HEIC" alt="描述图片内容3">
+      <img src="/static/Japan0627/IMG_3410.jpeg" alt="描述图片内容5">
+      <img src="/static/Japan0627/IMG_3424.JPG" alt="描述图片内容6">
+      <img src="/static/Japan0627/IMG_3428.HEIC" alt="描述图片内容7">
+      <img src="/static/Japan0627/IMG_3449.JPG" alt="描述图片内容8">
+
+      <!-- 更多图片... -->
+    </div>
+    <div class="content-text">
+      <h2>2023/06/27</h2>
+      <p>東京遊的第一天！😚</p>
+      <p>早上6:45的飛機真的超早！前一晚完全沒睡3:30就出發去機場了，結果在飛機上睡死還差點來不及化妝：）
+        <br>到東京後先到飯店放行李後就去吃飯逛了秋葉原～<br>簡單的第一天就過了，總之第一次來到東京好開心～💗</p>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="2" onclick="toggleHeart(this, 2)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 2)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 2)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/Japan0628/IMG_3455.HEIC" alt="描述图片内容1" class="active">
+      <img src="/static/Japan0628/IMG_3457.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0628/IMG_3468.HEIC" alt="描述图片内容3">
+      <img src="/static/Japan0628/IMG_3475.HEIC" alt="描述图片内容4">
+      <img src="/static/Japan0628/IMG_3496.HEIC" alt="描述图片内容5">
+      <img src="/static/Japan0628/IMG_3503.heic" alt="描述图片内容6">
+      <img src="/static/Japan0628/IMG_3685.HEIC" alt="描述图片内容7">
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2023/06/28</h2>
+      <p>今天是東京行的第二天～</p>
+      <p>來到東京的第二天就馬上到迪士尼報到！因為第一次到東京的迪士尼所以選了陸地的園區👏<br>終於吃到了三眼怪麻糬還有米奇冰棒！但其實麻糬不是很好吃整個大失望😮‍💨<br>
+        總之迪士尼真的是少女天堂，隨隨便便拍照都好漂亮，但人真的好多。<br>但其實我不是很喜歡遊樂園所以待到下午就跑了XD 晚上去了東京一番街逛街～這裡真的好好逛！！！</p>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="3" onclick="toggleHeart(this, 3)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 3)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this,3)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/Japan0629/img1.HEIC" alt="描述图片内容1" class="active">
+      <img src="/static/Japan0629/img2.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0629/img3.HEIC" alt="描述图片内容3">
+      <img src="/static/Japan0629/img4.HEIC" alt="描述图片内容1">
+      <img src="/static/Japan0629/img5.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0629/img6.HEIC" alt="描述图片内容3">
+
+      <!-- 更多图片... -->
+    </div>
+    <div class="content-text">
+      <h2>2023/06/29</h2>
+      <p>第三天去了澀谷！！</p>
+      <p>前一天在迪士尼真的太累太累了，今天賴床到10.才起床：）<br>去喝了我很想喝的藍瓶咖啡！！！結果是偏酸的美式整個大失望🙁<br>
+        接著去了陳小瑞最愛的寶可夢～PARCO百貨真的好好逛，一整天在澀谷整個逛不夠！！！<br>而且巷弄裡超多小店好好逛，扭蛋機超多！而且比台灣便宜超級多整個玩到發瘋都好可愛喔😻<br>
+        傍晚去了Shibuya sky看了日落，結果當天日落特別晚要等到７.才有，好可惜沒有看到：（<br>晚餐去吃了好吃的利久牛舌，好吃好吃推推👍</p>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="4" onclick="toggleHeart(this, 4)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 4)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 4)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/Japan0630/img1.JPG" alt="描述图片内容1" class="active">
+      <img src="/static/Japan0630/img2.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0630/img3.heic" alt="描述图片内容3">
+      <img src="/static/Japan0630/img4.HEIC" alt="描述图片内容1">
+      <img src="/static/Japan0630/img5.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0630/img6.HEIC" alt="描述图片内容3">
+
+      <!-- 更多图片... -->
+    </div>
+    <div class="content-text">
+      <h2>2023/06/30</h2>
+      <p>今天是東京的第四天～</p>
+      <p>去了很期待的築地市場！吃了網路上很紅的神樂壽司結果整個超雷！！！！💥<br>價格貴就算了海膽竟然是苦的😡 超級不推大家不要去😤<br>
+        路邊吃的活體海膽也沒有在台灣吃的好吃...來日本最想吃的就是海膽結果都超失望，希望下次可以吃到好吃的海膽🥲<br>不過還是有吃到好吃的草莓大福～便宜又好吃而且草莓超大顆的！！<br>
+        接著就在銀座吃吃逛逛走走了一天～晚餐吃了台灣沒有的shake shack😋</p>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="5" onclick="toggleHeart(this, 5)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 5)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 5)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/Japan0701/img1.HEIC" alt="描述图片内容1" class="active">
+      <img src="/static/Japan0701/img2.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0701/img3.heic" alt="描述图片内容3">
+
+      <!-- 更多图片... -->
+    </div>
+    <div class="content-text">
+      <h2>2023/07/01</h2>
+      <p>今天來到了第五天～🌸</p>
+      <p>今天去了原宿逛街，早上又去了藍瓶喝咖啡～今天喝熱美式我覺得比冰美式好喝！！推推<br>接著走去原宿的阿夫利吃午餐～本來對拉麵整個無興趣，但網路上真的太多人推薦阿夫利所以還是去試試了，結果點了沾麵整個超對我胃口😍
+        <br>下午路過一間下午茶店吃了水蜜桃塔，上面的水蜜桃真的超甜超好吃！💖</p>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="6" onclick="toggleHeart(this, 6)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 6)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 6)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/Japan0702/img1.JPG" alt="描述图片内容1" class="active">
+      <img src="/static/Japan0702/img2.JPG" alt="描述图片内容2">
+      <img src="/static/Japan0702/img3.HEIC" alt="描述图片内容3">
+      <img src="/static/Japan0702/img4.HEIC" alt="描述图片内容5">
+      <img src="/static/Japan0702/img5.HEIC" alt="描述图片内容6">
+      <img src="/static/Japan0702/img6.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0702/img7.HEIC" alt="描述图片内容3">
+      <img src="/static/Japan0702/img8.HEIC" alt="描述图片内容5">
+      <img src="/static/Japan0702/img9.HEIC" alt="描述图片内容6">
+      <img src="/static/Japan0702/img10.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0702/img11.HEIC" alt="描述图片内容3">
+      <img src="/static/Japan0702/img12.HEIC" alt="描述图片内容5">
+      <img src="/static/Japan0702/img13.HEIC" alt="描述图片内容6">
+      <img src="/static/Japan0702/img14.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0702/img15.HEIC" alt="描述图片内容3">
+      <img src="/static/Japan0702/img16.HEIC" alt="描述图片内容5">
+      <img src="/static/Japan0702/img17.HEIC" alt="描述图片内容6">
+      <img src="/static/Japan0702/img18.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0702/img19.HEIC" alt="描述图片内容3">
+      <img src="/static/Japan0702/img20.HEIC" alt="描述图片内容5">
+      <img src="/static/Japan0702/img21.HEIC" alt="描述图片内容6">
+      <img src="/static/Japan0702/img22.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0702/img23.HEIC" alt="描述图片内容3">
+      <img src="/static/Japan0702/img24.HEIC" alt="描述图片内容5">
+      <img src="/static/Japan0702/img25.HEIC" alt="描述图片内容6">
+      <img src="/static/Japan0702/img26.HEIC" alt="描述图片内容6">
+      <img src="/static/Japan0702/img27.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0702/img28.HEIC" alt="描述图片内容3">
+      <img src="/static/Japan0702/img29.HEIC" alt="描述图片内容5">
+      <img src="/static/Japan0702/img30.HEIC" alt="描述图片内容6">
+
+
+      <!-- 更多图片... -->
+    </div> 
+    <div class="content-text">
+      <h2>2023/07/02</h2>
+      <p>東京倒數第二天！！🔊</p>
+      <p>今天來到了這次東京最重要的一個行程！！就是<strong>哈利波特影城</strong>～<br>從小就超愛看，身為把1~7集看過十幾遍的人真的不來不行！！<br>
+        總之結論就是真的太推薦了🥹 真的好棒好壯觀好喜歡...買了斗篷跟魔杖🫶 總之真的超愛100分！！！💓<br>晚上到新宿走走路過一間居酒屋進去結果超好吃！！才發現是和牛專賣的居酒屋🤤 總之真的超級超級好吃 大推！！</p>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="7" onclick="toggleHeart(this, 7)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 7)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 7)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/Japan0703/img1.JPG" alt="描述图片内容1" class="active">
+      <img src="/static/Japan0703/img2.HEIC" alt="描述图片内容2">
+      <img src="/static/Japan0703/img3.HEIC" alt="描述图片内容3">
+      <img src="/static/Japan0703/img4.HEIC" alt="描述图片内容5">
+      <img src="/static/Japan0703/img5.HEIC" alt="描述图片内容6">
+
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2023/07/03</h2>
+      <p>終於來到了東京行的最後一天😭</p>
+      <p>真的好不想回台灣～今天沒有什麼行程，中午去吃了好吃的壽喜燒之後就去東京車站買了各種歐咪呀給，接著就去了晴空塔逛逛～<br>到了傍晚就去機場準備回台灣了～✈️</p>
+    </div>
+  </div>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+      // 选择所有的图片区块
+      let blocks = document.querySelectorAll('.content-block');
+  
+      blocks.forEach(block => {
+          let slides = block.querySelectorAll('.content-image img');
+          let currentSlide = 0;
+  
+          // 功能：显示下一张幻灯片
+          function nextSlide() {
+              slides[currentSlide].classList.remove('active');
+              currentSlide = (currentSlide + 1) % slides.length;
+              slides[currentSlide].classList.add('active');
+          }
+  
+          // 每5秒更换一次幻灯片
+          setInterval(nextSlide, 4000);
+      });
+  });
+
+  function toggleHeart(heartIcon, contentId) {
+    let currentCount = heartIcon.nextElementSibling;  // 这里假设计数紧跟在图标后面，可能需要调整
+    let action = heartIcon.innerHTML === '❤️' ? 'decrement' : 'increment';
+
+    fetch('/update-heart-count-japan', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: contentId, action: action })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            currentCount.textContent = ` ❤️ ${data.new_count}`;
+            heartIcon.innerHTML = heartIcon.innerHTML === '❤️' ? '&#9825;' : '❤️';
+        } else {
+            console.error('Error updating heart count:', data.error);
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+
+
+
+
+function showComments(commentIcon, id) {
+  let contentBlock = commentIcon.closest('.content-block');
+  let commentBox = contentBlock.querySelector('.comment-box');
+  let commentsList = commentBox.querySelector('.comment-list');
+  commentBox.style.display = 'flex'; // Show the modal
+
+  fetch(`/get-comments-japan/${id}`) // Adjust ID fetching if necessary
+    .then(response => response.json())
+    .then(data => {
+      commentsList.innerHTML = ''; // Clear previous comments
+      data.comments.forEach(comment => {
+        const li = document.createElement('li');
+        li.textContent = comment;
+        commentsList.appendChild(li);
+      });
+    })
+    .catch(error => console.error('Error loading comments:', error));
+}
+
+function postComment(button, id) {
+  const commentBox = button.closest('.comment-box');
+  const textarea = commentBox.querySelector('textarea');
+  const comment = textarea.value.trim();
+  if (comment) {
+    fetch(`/post-comment-japan/${id}`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ comment: comment })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        const li = document.createElement('li');
+        li.textContent = comment;
+        commentBox.querySelector('.comment-list').appendChild(li);
+        textarea.value = ''; // Clear the textarea
+      } else {
+        console.error('Failed to post comment:', data.error);
+      }
+    });
+  }
+}
+
+function closeComments(button) {
+  const commentBox = button.closest('.comment-box');
+  commentBox.style.display = 'none'; // Hide the modal
+}
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    fetch('/get-heart-counts-japan')
+        .then(response => response.json())
+        .then(data => {
+            const heartCounts = data.heart_counts;
+            const heartIcons = document.querySelectorAll('.heart-icon');
+
+            heartIcons.forEach((icon, index) => {
+                // 确保有足够的心形图标对应文件中的数据
+                if (index < heartCounts.length) {
+                    const countSpan = document.createElement('span');
+                    countSpan.textContent = ` ❤️ ${heartCounts[index]}`;
+                    icon.parentNode.insertBefore(countSpan, icon.nextSibling);
+                }
+            });
+        })
+        .catch(error => console.error('Error loading heart counts:', error));
+});
+
+
+  </script>
+  
+</html>

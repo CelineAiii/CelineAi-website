@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>America Trip</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/style.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/travel.css')}}">
+
+</head>
+<body>
+
+  <header>
+    <a href="/"><img src="/static/logo.png" alt="Logo"></a>
+    <nav>
+      <a href="/">首頁</a>
+      <a href="/about">關於我</a>
+      <a href="/experience">個人經歷</a>
+      <div class="dropdown">
+          <a>旅遊</a>
+          <div class="dropdown-content">
+              <a href="/travel1">America🇺🇸</a>
+              <a href="/travel2">Japan🇯🇵</a>
+              <a href="/travel3">待續...</a>
+          </div>
+      </div>
+      <a href="/contact">聯絡我</a>
+  </nav>
+  </header>
+
+  <h1>🇺🇸 About my Trip in America! 🇺🇸</h1>
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="1" onclick="toggleHeart(this, 1)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 1)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 1)">留言</button>
+      </div>
+    </div>
+    
+    <div class="content-image">
+      <img src="/static/US_photo/us0703/img1.jpg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0703/img2.jpg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0703/img3.JPG" alt="描述图片内容3">
+      <img src="/static/US_photo/us0703/img4.JPG" alt="描述图片内容5">
+
+      <!-- 更多图片... -->
+    </div>
+    <div class="content-text">
+      <h2>2018/07/03</h2>
+      <p>美國行的第一天！😚</p>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="2" onclick="toggleHeart(this, 2)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 2)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 2)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0704/img1.jpg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0704/img2.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0704/img3.jpeg" alt="描述图片内容3">
+      <img src="/static/US_photo/us0704/img4.jpeg" alt="描述图片内容5">
+      <img src="/static/US_photo/us0704/img5.jpeg" alt="描述图片内容5">
+      <img src="/static/US_photo/us0704/img6.jpeg" alt="描述图片内容5">
+      <img src="/static/US_photo/us0704/img7.jpeg" alt="描述图片内容5">
+      <img src="/static/US_photo/us0704/img8.jpeg" alt="描述图片内容5">
+      <img src="/static/US_photo/us0704/img9.jpeg" alt="描述图片内容5">
+      <img src="/static/US_photo/us0704/img10.jpeg" alt="描述图片内容5">
+      <img src="/static/US_photo/us0704/img11.JPG" alt="描述图片内容5">
+      <img src="/static/US_photo/us0704/img12.jpeg" alt="描述图片内容5">
+
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2018/07/04</h2>
+      <p>今天是美國行的第二天～☀️
+      </p>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="3" onclick="toggleHeart(this, 3)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 3)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this,3)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0705/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0705/img2.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0705/img3.jpeg" alt="描述图片内容2">
+
+
+      <!-- 更多图片... -->
+    </div>
+    <div class="content-text">
+      <h2>2018/07/05</h2>
+      <p>Day3</p>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="4" onclick="toggleHeart(this, 4)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 4)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 4)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0706/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0706/img2.JPG" alt="描述图片内容2">
+
+      <!-- 更多图片... -->
+    </div>
+    <div class="content-text">
+      <h2>2018/07/06</h2>
+      <p>Day4</p>
+
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="5" onclick="toggleHeart(this, 5)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 5)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 5)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0707/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0707/img2.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0707/img3.jpeg" alt="描述图片内容3">
+      <img src="/static/US_photo/us0707/img4.JPG" alt="描述图片内容3">
+      <img src="/static/US_photo/us0707/img5.JPG" alt="描述图片内容3">
+
+      <!-- 更多图片... -->
+    </div>
+    <div class="content-text">
+      <h2>2018/07/07</h2>
+      <p>Day5</p>
+
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="6" onclick="toggleHeart(this, 6)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 6)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 6)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0708/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0708/img2.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0708/img3.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0708/img4.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0708/img5.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0708/img6.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0708/img7.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0708/img8.JPG" alt="描述图片内容2">
+
+
+
+
+      <!-- 更多图片... -->
+    </div> 
+    <div class="content-text">
+      <h2>2018/07/08</h2>
+      <p>Day6</p>
+
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="7" onclick="toggleHeart(this, 7)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 7)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 7)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0709/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0709/img2.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0709/img3.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0709/img4.jpeg" alt="描述图片内容2">
+
+
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2018/07/09</h2>
+      <p>Day7</p>
+
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="7" onclick="toggleHeart(this, 8)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 8)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 8)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0710/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0710/img2.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0710/img3.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0710/img4.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0710/img5.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0710/img6.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0710/img7.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0710/img8.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0710/img9.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0710/img10.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0710/img11.JPG" alt="描述图片内容2">
+
+
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2018/07/10</h2>
+      <p>Day8</p>
+
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="7" onclick="toggleHeart(this, 9)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 9)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 9)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0711/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0711/img2.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0711/img3.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0711/img4.jpeg" alt="描述图片内容2">
+
+
+
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2018/07/11</h2>
+      <p>Day9</p>
+
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="7" onclick="toggleHeart(this, 10)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 10)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 10)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0712/img1.jpg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0712/img2.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0712/img3.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0712/img4.jpeg" alt="描述图片内容2">
+
+
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2018/07/12</h2>
+      <p>Day10</p>
+
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="7" onclick="toggleHeart(this, 11)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 11)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 11)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0713/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0713/img2.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0713/img3.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0713/img4.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0713/img5.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0713/img6.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0713/img7.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0713/img8.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0713/img9.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0713/img10.JPG" alt="描述图片内容2">
+
+
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2018/07/13</h2>
+      <p>Day11</p>
+
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="7" onclick="toggleHeart(this, 12)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 12)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 12)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0714/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0714/img2.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0714/img3.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0714/img4.JPG" alt="描述图片内容2">
+
+
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2018/07/14</h2>
+      <p>Day12</p>
+
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="7" onclick="toggleHeart(this, 13)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 13)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 13)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0715/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0715/img2.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0715/img3.JPG" alt="描述图片内容2">
+
+
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2018/07/15</h2>
+      <p>Day13</p>
+
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="7" onclick="toggleHeart(this, 14)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 14)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 14)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0716/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0716/img2.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0716/img3.JPG" alt="描述图片内容2">
+      <img src="/static/US_photo/us0716/img4.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0716/img5.jpeg" alt="描述图片内容2">
+
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2018/07/16</h2>
+      <p>Day14</p>
+
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="7" onclick="toggleHeart(this, 15)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 15)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 15)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0717/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0717/img2.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0717/img3.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0717/img4.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0717/img5.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0717/img6.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0717/img7.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0717/img8.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0717/img9.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0717/img10.jpeg" alt="描述图片内容2">
+      <img src="/static/US_photo/us0717/img11.JPG" alt="描述图片内容2">
+
+
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2018/07/17</h2>
+      <p>Day15</p>
+
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="icons" style="position: absolute; top: 10px; right: 10px;">
+      <span class="heart-icon" data-id="7" onclick="toggleHeart(this, 16)">&#9825;</span>
+      <span class="comment-icon" onclick="showComments(this, 16)">💬</span>
+    </div>
+    <div class="comment-box" style="display:none;">
+      <div class="comment-overlay"></div>
+      <div class="comment-content">
+        <button class="close-button" onclick="closeComments(this)">X</button>
+        <ul class="comment-list"></ul> <!-- List of comments -->
+        <textarea placeholder="Add a comment..."></textarea>
+        <button onclick="postComment(this, 16)">留言</button>
+      </div>
+    </div>
+    <div class="content-image">
+      <img src="/static/US_photo/us0718/img1.jpeg" alt="描述图片内容1" class="active">
+      <img src="/static/US_photo/us0718/img2.JPG" alt="描述图片内容2">
+
+      <!-- 更多图片... -->
+    </div>    
+    <div class="content-text">
+      <h2>2018/07/18</h2>
+      <p>Day16</p>
+
+    </div>
+  </div>
+</body>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // 选择所有的图片区块
+        let blocks = document.querySelectorAll('.content-block');
+    
+        blocks.forEach(block => {
+            let slides = block.querySelectorAll('.content-image img');
+            let currentSlide = 0;
+    
+            // 功能：显示下一张幻灯片
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+    
+            // 每5秒更换一次幻灯片
+            setInterval(nextSlide, 4000);
+        });
+    });
+  
+    function toggleHeart(heartIcon, contentId) {
+      let currentCount = heartIcon.nextElementSibling;  // 这里假设计数紧跟在图标后面，可能需要调整
+      let action = heartIcon.innerHTML === '❤️' ? 'decrement' : 'increment';
+  
+      fetch('/update-heart-count-US', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ id: contentId, action: action })
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              currentCount.textContent = ` ❤️ ${data.new_count}`;
+              heartIcon.innerHTML = heartIcon.innerHTML === '❤️' ? '&#9825;' : '❤️';
+          } else {
+              console.error('Error updating heart count:', data.error);
+          }
+      })
+      .catch(error => console.error('Error:', error));
+  }
+  
+  
+  
+  
+  
+  function showComments(commentIcon, id) {
+    let contentBlock = commentIcon.closest('.content-block');
+    let commentBox = contentBlock.querySelector('.comment-box');
+    let commentsList = commentBox.querySelector('.comment-list');
+    commentBox.style.display = 'flex'; // Show the modal
+  
+    fetch(`/get-comments-US/${id}`) // Adjust ID fetching if necessary
+      .then(response => response.json())
+      .then(data => {
+        commentsList.innerHTML = ''; // Clear previous comments
+        data.comments.forEach(comment => {
+          const li = document.createElement('li');
+          li.textContent = comment;
+          commentsList.appendChild(li);
+        });
+      })
+      .catch(error => console.error('Error loading comments:', error));
+  }
+  
+  function postComment(button, id) {
+    const commentBox = button.closest('.comment-box');
+    const textarea = commentBox.querySelector('textarea');
+    const comment = textarea.value.trim();
+    if (comment) {
+      fetch(`/post-comment-US/${id}`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ comment: comment })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          const li = document.createElement('li');
+          li.textContent = comment;
+          commentBox.querySelector('.comment-list').appendChild(li);
+          textarea.value = ''; // Clear the textarea
+        } else {
+          console.error('Failed to post comment:', data.error);
+        }
+      });
+    }
+  }
+  
+  function closeComments(button) {
+    const commentBox = button.closest('.comment-box');
+    commentBox.style.display = 'none'; // Hide the modal
+  }
+  
+  
+  
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('/get-heart-counts-US')
+          .then(response => response.json())
+          .then(data => {
+              const heartCounts = data.heart_counts;
+              const heartIcons = document.querySelectorAll('.heart-icon');
+  
+              heartIcons.forEach((icon, index) => {
+                  // 确保有足够的心形图标对应文件中的数据
+                  if (index < heartCounts.length) {
+                      const countSpan = document.createElement('span');
+                      countSpan.textContent = ` ❤️ ${heartCounts[index]}`;
+                      icon.parentNode.insertBefore(countSpan, icon.nextSibling);
+                  }
+              });
+          })
+          .catch(error => console.error('Error loading heart counts:', error));
+  });
+  
+  
+    </script>
+</body>
+</html>

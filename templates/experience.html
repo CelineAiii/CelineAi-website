@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/style.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/experience.css')}}">
+</head>
+<body>
+
+  <header>
+    <a href="/"><img src="/static/logo.png" alt="Logo"></a>
+    <nav>
+      <a href="/">首頁</a>
+      <a href="/about">關於我</a>
+      <a href="/experience">個人經歷</a>
+      <div class="dropdown">
+          <a>旅遊</a>
+          <div class="dropdown-content">
+              <a href="/travel1">America🇺🇸</a>
+              <a href="/travel2">Japan🇯🇵</a>
+              <a href="/travel3">待續...</a>
+          </div>
+      </div>
+      <a href="/contact">聯絡我</a>
+    </nav>
+  </header>
+  <br>
+  <h1 style="text-align: center; color: #804d63;">✨ My Experience ✨</h1>
+  <div class="expandable-section">
+    <button class="toggle-button" onclick="toggleContent(this)">畢業專題 CandyDiary自動化食品暨標籤影像辨識紀錄系統🔻</button>
+    <div class="content">
+      <a href="https://youtu.be/r6GBRc9c0-c?si=hBUZYahE8B4Pm3Su"><button class="custom-button">介紹影片</button></a>
+      <a href="https://drive.google.com/file/d/1BNyJ9jLHF0gjxDSXdLQUbmEF5_036xWA/view?usp=sharing"><button class="custom-button">海報介紹(中)</button></a>
+      <a href="https://drive.google.com/file/d/1whVqcwwqcjCekDTz6UwzS_Fu_CrFP1k2/view?usp=sharing"><button class="custom-button">海報介紹(英)</button></a>
+
+      <h2>- 獲獎紀錄 -</h2>
+      <h3>2023萬潤創新創意競賽 <strong>佳作</strong></h3>
+      <img src="/static/experience/萬潤佳作得獎獎狀&獎牌.jpg" style="margin-right: 10px;">
+      <img src="/static/experience/IMG_5975.JPG" style="margin-left: 10px;">
+      <br>
+      <h3 style="margin-top: 40px;">112學年度長庚大學AI暨資工畢業專題展 <strong>第二名</strong></h3>
+      <img src="/static/experience/專題展獎狀.png" style="margin-right: 10px;">
+      <img src="/static/experience/IMG_6490.HEIC" style="margin-left: 10px;">
+      </div>
+  </div>
+
+  <div class="expandable-section">
+    <button class="toggle-button" onclick="toggleContent(this)">大二上 A* algorithm實作🔻</button>
+    <div class="content">
+      <embed src="/static/experience/人工專題final.pdf" type="application/pdf" class="pdf-container">
+      </div>
+  </div>
+
+  <div class="expandable-section">
+    <button class="toggle-button" onclick="toggleContent(this)">大二上 Schooltify🔻</button>
+    <div class="content">
+      <embed src="/static/experience/資料庫pptx.pdf" type="application/pdf" class="pdf-container">
+      </div>
+  </div>
+
+  <div class="expandable-section">
+    <button class="toggle-button" onclick="toggleContent(this)">大三下 Titanic Survival prediction🔻</button>
+    <div class="content">
+      <embed src="/static/experience/DataMining.pdf" type="application/pdf" class="pdf-container">
+      </div>
+  </div>
+
+  <div class="expandable-section">
+    <button class="toggle-button" onclick="toggleContent(this)">大三下 老舊照片修復🔻</button>
+    <div class="content">
+      <embed src="/static/experience/Med_final.pdf" type="application/pdf" class="pdf-container">
+      </div>
+  </div>
+
+  <div class="expandable-section">
+    <button class="toggle-button" onclick="toggleContent(this)">大四上 Fire Detection🔻</button>
+    <div class="content">
+      <embed src="/static/experience/電腦視覺期末報告.pdf" type="application/pdf" class="pdf-container">
+      </div>
+  </div>
+
+  <div class="expandable-section">
+    <button class="toggle-button" onclick="toggleContent(this)">大四上 世界名畫數據庫🔻</button>
+    <div class="content">
+      <embed src="/static/experience/資料庫設計.pdf" type="application/pdf" class="pdf-container">
+      </div>
+  </div>
+
+  
+
+  <script>
+    function toggleContent(button) {
+      var content = button.nextElementSibling;
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        var embed = content.querySelector("embed");
+        embed.src = embed.src; // 重新設置 src 以重新加載 PDF
+      } else {
+        content.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>

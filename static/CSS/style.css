@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec; /* 粉色背景色碼 */
+    color: #333; /* 文字顏色 */
+    overflow-x: hidden;
+  }
+
+  header {
+    background-color: #D6B6DE; /* 上方目錄欄背景色碼 */
+    padding: 20px;
+    display: flex; /* 將 header 設為 flex container */
+    align-items: center; /* 垂直置中元素 */
+    justify-content: space-between; /* 水平空間均分 */
+  }
+
+  header nav {
+    display: flex; /* 將 nav 設為 flex container */
+    justify-content: space-around;
+    background-color: #D6B6DE; /* 分頁按鈕背景色碼 */
+    padding: 5px;
+    margin-right: 50px; 
+  }
+
+  header nav a {
+    text-decoration: none;
+    color: #fff; /* 分頁按鈕文字顏色 */
+    font-weight: bold;
+    font-size: 18px;
+    margin:  0 30px;
+  }
+
+  header nav a:hover {
+    color: #FAC8D2; /* 鼠標懸停時的文字顏色 */
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  header img {
+    width: 120px; /* 調整 Logo 寬度 */
+    height: 120px; /* 調整 Logo 高度 */
+    margin-right: 10px; /* 可根據需要調整 Logo 與標題的間距 */
+  }
+
+  .photo-slider-container {
+width: 100%;
+overflow: hidden;
+}
+
+  .photo-slider {
+display: flex;
+width: 300%; /* 每張照片的寬度總和，這裡假設每張照片佔比為 33.33% */
+transition: transform 100s ease;
+}
+
+  .photo-slider img {
+width: 8.5%;
+height: auto;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}

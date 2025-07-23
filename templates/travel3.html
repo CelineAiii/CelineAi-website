@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More Trip...</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/style.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/travel.css')}}">
+  <style>
+    section {
+      display: grid;
+      place-items: center; /* 居中子元素 */
+      margin: 200px 0;
+    }
+    section img {
+      width: 5%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="/"><img src="/static/logo.png" alt="Logo"></a>
+    <nav>
+      <a href="/">首頁</a>
+      <a href="/about">關於我</a>
+      <a href="/experience">個人經歷</a>
+      <div class="dropdown">
+          <a>旅遊</a>
+          <div class="dropdown-content">
+              <a href="/travel1">America🇺🇸</a>
+              <a href="/travel2">Japan🇯🇵</a>
+              <a href="/travel3">待續...</a>
+          </div>
+      </div>
+      <a href="/contact">聯絡我</a>
+  </nav>
+  </header>
+
+  <section>
+    <!-- 這裡放你網頁的內容 -->
+    <img src="/static/luggage.png">
+    <h2>未來將拜訪更多國家...</h2>
+  </section>
+
+</body>
+</html>

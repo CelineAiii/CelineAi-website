@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me!</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/style.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/about.css')}}">
+</head>
+<body>
+
+  <header>
+    <a href="/"><img src="/static/logo.png" alt="Logo"></a>
+    <nav>
+      <a href="/">首頁</a>
+      <a href="/about">關於我</a>
+      <a href="/experience">個人經歷</a>
+      <div class="dropdown">
+          <a>旅遊</a>
+          <div class="dropdown-content">
+              <a href="/travel1">America🇺🇸</a>
+              <a href="/travel2">Japan🇯🇵</a>
+              <a href="/travel3">待續...</a>
+          </div>
+      </div>
+      <a href="/contact">聯絡我</a>
+  </nav>
+  </header>
+  <br>
+  <h1 style="text-align: center; color: #804d63;">✨ Something About Me ✨</h1>
+  <section class="profile">
+    <div class="profile-image" >
+      <img src="{{ url_for('static', filename='about/beauty_1702490957255.PNG') }}" alt="Your Profile Image">
+    </div>
+    <div class="profile-content" >
+      <h1>艾思嘉 / Celine Ai </h1>
+      <strong>
+        <p>一點點關於我的事情...</p>
+        <p>2001-09-11 / 處女座</p>
+        <p>我來自林口大家庭，大學就讀於長庚大學人工智慧學程，未來也會繼續留在長庚讀研就讀資工所。</p>
+        <p>技能：C/C++, python, html, SQL, Dart</p>
+        <p>歡迎來到我的個人網站😃</p>
+      </strong>
+      <hr>
+      <div class="profile-buttons">
+        <a href="/experience" class="button resume">Projects</a>
+        <a href="/travel1" class="button projects"> Trip </a>
+        <a href="/contact" class="button contact">Contact</a>
+      </div>
+    </div>
+  </section>
+  <br>
+  <h1 style="text-align: center; color: #804d63;">✨ Working Experience ✨</h1>
+  <br>
+  <h2 style="text-align: center;">- School Experience -</h2>
+  <div class="container">
+    <div class="box"><strong>AI學系/智慧運算學院 小編</strong><br>2022/10-2024/06</div>
+
+    <div class="box"><strong>AI學系/智慧運算學院 網頁管理員</strong><br>2023/08-2024/06</div>
+    <div class="box"><strong>實驗室研究助理、課堂助教</strong><br>2023/09 ～</div>
+  </div>
+  <br>
+  <h2 style="text-align: center;">- Other Experience -</h2>
+  <div class="container">
+    <div class="box"><strong>數學家教</strong><br>2021/09-2022/02</div>
+    <div class="box"><strong>補習班數學講師</strong><br>2022/02-2024/02</div>
+    <div class="box"><strong>To be continue...</strong><br>期待更多經驗...</div>
+  </div>
+
+
+</body>
+</html>

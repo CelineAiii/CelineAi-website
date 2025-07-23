@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='CSS/style.css')}}">
+  <style>
+    .photo-slider-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+    .photo-slider {
+      display: flex;
+      transition: transform 1s linear;
+    }
+    .photo-slider img {
+      height: 580px; /* 固定圖片高度 */
+      object-fit: cover; /* 保持圖片原比例 */
+      margin-right: 10px; /* 添加圖片之間的間距 */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/"><img src="/static/logo.png" alt="Logo"></a>
+    <nav>
+      <a href="/">首頁</a>
+      <a href="/about">關於我</a>
+      <a href="/experience">個人經歷</a>
+      <div class="dropdown">
+          <a>旅遊</a>
+          <div class="dropdown-content">
+              <a href="/travel1">America🇺🇸</a>
+              <a href="/travel2">Japan🇯🇵</a>
+              <a href="/travel3">待續...</a>
+          </div>
+      </div>
+      <a href="/contact">聯絡我</a>
+    </nav>
+  </header>
+  <br>
+  <h1 style="text-align: center; color: #804d63;">Welcome to my website!</h1>
+  <br>
+  <div class="photo-slider-container">
+    <div class="photo-slider">
+      <img src="/static/home/img_01.HEIC" alt="Image 1">
+      <img src="/static/home/img_02.HEIC" alt="Image 2">
+      <img src="/static/home/img_03.HEIC" alt="Image 3">
+      <img src="/static/home/img_04.HEIC" alt="Image 4">
+      <img src="/static/home/img_05.HEIC" alt="Image 5">
+      <img src="/static/home/img_06.HEIC" alt="Image 6">
+      <img src="/static/home/img_07.jpeg" alt="Image 7">
+      <img src="/static/home/img_08.jpeg" alt="Image 8">
+      <img src="/static/home/img_09.jpeg" alt="Image 9">
+      <img src="/static/home/img_010.jpeg" alt="Image 10">
+      <img src="/static/home/img_011.jpeg" alt="Image 11">
+      <img src="/static/home/img_012.jpeg" alt="Image 12">
+      <img src="/static/home/img_013.jpeg" alt="Image 13">
+      <img src="/static/home/img_014.jpeg" alt="Image 14">
+      <img src="/static/home/img_015.jpeg" alt="Image 15">
+      <img src="/static/home/img_016.jpeg" alt="Image 16">
+      <img src="/static/home/img_017.jpeg" alt="Image 17">
+      <img src="/static/home/img_018.jpeg" alt="Image 18">
+      <img src="/static/home/img_019.jpeg" alt="Image 19">
+      <img src="/static/home/img_020.jpeg" alt="Image 20">
+      <img src="/static/home/img_021.jpeg" alt="Image 21">
+      <img src="/static/home/img_022.jpeg" alt="Image 22">
+      <img src="/static/home/img_023.jpeg" alt="Image 23">
+      <img src="/static/home/img_024.jpeg" alt="Image 24">
+      <!-- 複製第一組照片以實現循環播放 -->
+      <img src="/static/home/img_01.HEIC" alt="Image 1">
+      <img src="/static/home/img_02.HEIC" alt="Image 2">
+      <img src="/static/home/img_03.HEIC" alt="Image 3">
+      <img src="/static/home/img_04.HEIC" alt="Image 4">
+      <img src="/static/home/img_05.HEIC" alt="Image 5">
+      <img src="/static/home/img_06.HEIC" alt="Image 6">
+      <img src="/static/home/img_07.jpeg" alt="Image 7">
+      <img src="/static/home/img_08.jpeg" alt="Image 8">
+      <img src="/static/home/img_09.jpeg" alt="Image 9">
+      <img src="/static/home/img_010.jpeg" alt="Image 10">
+      <img src="/static/home/img_011.jpeg" alt="Image 11">
+      <img src="/static/home/img_012.jpeg" alt="Image 12">
+      <img src="/static/home/img_013.jpeg" alt="Image 13">
+      <img src="/static/home/img_014.jpeg" alt="Image 14">
+      <img src="/static/home/img_015.jpeg" alt="Image 15">
+      <img src="/static/home/img_016.jpeg" alt="Image 16">
+      <img src="/static/home/img_017.jpeg" alt="Image 17">
+      <img src="/static/home/img_018.jpeg" alt="Image 18">
+      <img src="/static/home/img_019.jpeg" alt="Image 19">
+      <img src="/static/home/img_020.jpeg" alt="Image 20">
+      <img src="/static/home/img_021.jpeg" alt="Image 21">
+      <img src="/static/home/img_022.jpeg" alt="Image 22">
+      <img src="/static/home/img_023.jpeg" alt="Image 23">
+      <img src="/static/home/img_024.jpeg" alt="Image 24">
+
+      <img src="/static/home/img_01.HEIC" alt="Image 1">
+      <img src="/static/home/img_02.HEIC" alt="Image 2">
+      <img src="/static/home/img_03.HEIC" alt="Image 3">
+      <img src="/static/home/img_04.HEIC" alt="Image 4">
+      <img src="/static/home/img_05.HEIC" alt="Image 5">
+      <img src="/static/home/img_06.HEIC" alt="Image 6">
+      <img src="/static/home/img_07.jpeg" alt="Image 7">
+      <img src="/static/home/img_08.jpeg" alt="Image 8">
+      <img src="/static/home/img_09.jpeg" alt="Image 9">
+      <img src="/static/home/img_010.jpeg" alt="Image 10">
+      <img src="/static/home/img_011.jpeg" alt="Image 11">
+      <img src="/static/home/img_012.jpeg" alt="Image 12">
+      <img src="/static/home/img_013.jpeg" alt="Image 13">
+      <img src="/static/home/img_014.jpeg" alt="Image 14">
+      <img src="/static/home/img_015.jpeg" alt="Image 15">
+      <img src="/static/home/img_016.jpeg" alt="Image 16">
+      <img src="/static/home/img_017.jpeg" alt="Image 17">
+      <img src="/static/home/img_018.jpeg" alt="Image 18">
+      <img src="/static/home/img_019.jpeg" alt="Image 19">
+      <img src="/static/home/img_020.jpeg" alt="Image 20">
+      <img src="/static/home/img_021.jpeg" alt="Image 21">
+      <img src="/static/home/img_022.jpeg" alt="Image 22">
+      <img src="/static/home/img_023.jpeg" alt="Image 23">
+      <img src="/static/home/img_024.jpeg" alt="Image 24">
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const slider = document.querySelector(".photo-slider");
+      const sliderContainer = document.querySelector(".photo-slider-container");
+      let translateValue = 0;
+
+      function autoSlide() {
+        translateValue -= 1; // 每次移動 1px
+        slider.style.transform = `translateX(${translateValue}px)`;
+        requestAnimationFrame(autoSlide);
+      }
+
+      requestAnimationFrame(autoSlide);
+    });
+  </script>
+</body>
+</html>

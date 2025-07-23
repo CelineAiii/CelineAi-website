@@ -1,0 +1,71 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 2%;
+}
+.profile-image {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-content {
+  max-width: 700px;
+}
+.profile-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+.profile-buttons .button {
+  display: inline-block;
+  margin: 0 30px;
+  padding: 15px 20px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.profile-buttons .resume {
+  background-color: #e7cced; /* 修改顏色 */
+}
+.profile-buttons .projects {
+  background-color: #dbc3e0; /* 修改顏色 */
+}
+.profile-buttons .contact {
+  background-color: #ccb6d1; /* 修改顏色 */
+}
+.profile-buttons .button:hover {
+  opacity: 0.8;
+}
+
+hr {
+  border: none; /* 移除預設的邊框 */
+  border-top: 1px solid #804d63;; /* 添加自訂顏色的頂部邊框 */
+  height: 1px;
+  background-color: #804d63;; /* 設置背景顏色，確保顏色一致 */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.box {
+  flex: 1;
+  margin: 30px;
+  padding: 20px;
+  background-color: #D6B6DE;
+  text-align: center;
+}
